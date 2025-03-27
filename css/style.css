@@ -297,11 +297,10 @@ a:hover{
 }
 
 .botao-pesquisa {
-    position: fixed;
     height: 30px;
-    width:30px;
-    margin-right: 20px;
+    width: 30px;
 }
+
 
 /* Estilo do formulário de pesquisa */
 .barra-pesquisa {
@@ -314,7 +313,7 @@ a:hover{
 /* Estilo do campo de entrada */
 .barra-pesquisa input {
     padding: 5px; /* Espaçamento interno do campo */
-    margin-right: 60px; /* Espaço entre o campo de entrada e o botão */
+    margin-right: 12px; /* Espaço entre o campo de entrada e o botão */
 }
 
 

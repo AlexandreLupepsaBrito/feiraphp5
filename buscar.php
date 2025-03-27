@@ -31,12 +31,12 @@ if (isset($_GET['palavra'])) {
         <a href="">Outros</a>
     </div>
     <nav>
-        <form method="GET" action="buscar.php" style="display: inline;">
-            <input type="text" name="palavra" placeholder="Buscar produto..." required>
-            <button type="submit">
-                <img src="imagens/pesquisa.png" alt="Pesquisar" width="20">
-            </button>
-        </form>
+    <form method="GET" action="buscar.php" class="barra-pesquisa">
+    <input type="text" name="palavra" placeholder="Buscar produto..." required>
+    <button type="submit" class="botao-pesquisa">
+        <img src="imagens/pesquisa.png" alt="Pesquisar" width="17">
+    </button>
+</form>
         <a href="Perfil/perfil.php"><img src="imagens/usuario.png" alt="Usuário" width="20"></a>
         <a href=""><img src="imagens/carrinho-carrinho.png" alt="Carrinho" width="20"></a>
     </nav>
