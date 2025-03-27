@@ -1,0 +1,47 @@
+Validação
+
+Cadastro: Validação de campos obrigatórios, formato de email e unicidade do email.
+Login: Verificação de usuário e senha no banco de dados.
+Edição: Validação de campos obrigatórios e formato de email.
+
+
+Segurança
+
+Hash de senha: Utilize password_hash() para armazenar senhas de forma segura.
+Prevenção de SQL Injection: Utilize prepared statements ou parameterized queries para evitar ataques SQL Injection.
+HTTPS: Utilize HTTPS para criptografar a comunicação entre o navegador e o servidor.
+---------------------------------------------------------------
+crie no banco de dados
+
+
+CREATE TABLE usuarios (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(255) NOT NULL,
+    email VARCHAR(255) UNIQUE NOT NULL,
+    senha VARCHAR(255) NOT NULL
+    avatar VARCHAR(255) NULL,
+);
+
+CREATE TABLE produtos (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(255) NOT NULL,
+    preco DECIMAL(10,2) NOT NULL,
+    categoria VARCHAR(100) NOT NULL,
+    descricao TEXT NOT NULL,
+    imagem VARCHAR(255) NOT NULL
+);
+
+
+<body>
+    <div class="perfil">
+        <nav>
+            <ul>
+                <li><a href="../Produtos/addproduto.php">Adicionar Produto</a></li>
+                <li><a href="../Produtos/exibirprodutos.php">Exibir Produtos</a></li>
+                <li><a href="editar.php">Editar Perfil</a></li>
+                <li><a href="excluir.php">Excluir Perfil</a></li>
+                <li><a href="logout.php">Sair</a></li>
+            </ul>
+        </nav>
+    </div>
+</body>
