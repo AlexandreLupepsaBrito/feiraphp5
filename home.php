@@ -61,7 +61,7 @@ if (is_array($products)) {
     <form method="GET" action="buscar.php" class="barra-pesquisa">
     <input type="text" name="palavra" placeholder="Buscar produto..." required>
     <button type="submit" class="botao-pesquisa">
-        <img src="imagens/pesquisa.png" alt="Pesquisar" width="17">
+        <img src="imagens/pesquisa.png" alt="Pesquisar" width="20">
     </button>
 </form>
         <a href="Perfil/perfil.php"><img src="imagens/usuario.png" alt="Usuário" width="20"></a>
@@ -82,7 +82,7 @@ if (is_array($products)) {
         <div class="line"></div>
 
         <main class="produto-page">
-        <div class="container-principal">
+    <div class="container-principal">
         <?php
         if ($result && $result->num_rows > 0) {
             while ($row = $result->fetch_assoc()) {
@@ -91,16 +91,17 @@ if (is_array($products)) {
                 echo "<a href='paginapd.php?id=" . $row['id'] . "' aria-label='Ver detalhes do produto " . htmlspecialchars($row['nome']) . "'>";
                 echo "<img src='Produtos/uploads/" . htmlspecialchars($row['imagem']) . "' alt='" . htmlspecialchars($row['nome']) . "' class='img-fluid' onerror=\"this.onerror=null; this.src='/path/to/default/image.jpg';\" />";
                 echo "</a>";
-                echo "<span>" . htmlspecialchars($row['nome']) . "</span><br><br>";
+                echo "<span>" . htmlspecialchars($row['nome']) . "</span>";
                 echo "<span>R$ <span class='price'>" . number_format($row['preco'], 2, ',', '.') . "</span><br>";
                 echo "<span class='unit'>" . htmlspecialchars($row['categoria']) . "</span>";
+                echo "</div></div>";
             }
         } else {
             echo "<div class='produto-container-principal'><p>Nenhum produto encontrado.</p></div>";
         }
         ?>
-        </div>
-        </main>
+    </div>
+</main>
 
         <footer>
             <div class="footer">

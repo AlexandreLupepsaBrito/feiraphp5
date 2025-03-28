@@ -2,7 +2,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
     font-family: 'Lato', sans-serif;
 }
 
@@ -20,7 +19,6 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-
     height: 100px;
     padding: 20px 5%;
 }
@@ -81,7 +79,6 @@ section {
 .promocao-header {
     display: flex;
     justify-content: space-between;
-
     padding: 15px 5%;
 }
 
@@ -161,7 +158,6 @@ main {
 }
 
 footer {
-    
     background-color: #eee;
 }
 .footer{
@@ -220,21 +216,17 @@ footer {
 .footer-button {
     width: 90px;
     height: 40px;
-
     color: white;
     font-weight: 700;
-
     border: 1px solid #eee;
     border-top-right-radius: 4px;
     border-bottom-right-radius: 40px;
     background-color: #12AF50;
-
     transition: 0.2s;
 }
 
 .footer-button:hover {
     background-color: #12AF50;
-
     border-top-right-radius: 40px;
     border-bottom-right-radius: 4px;
 }
@@ -273,48 +265,53 @@ footer p a:hover {
 }
 
 /* Formatação do menu */
-a{
+a {
     text-decoration: none;
 }
 
-a:link, a:visited{
+a:link, a:visited {
     color: #12AF50;
 }
 
-a:hover{
+a:hover {
     text-decoration: underline;
 }
 
-#div-main a:link, #area-cabecalho a:visited{
+#div-main a:link, #area-cabecalho a:visited {
     color: #f5f2f2;
     padding: 8px 12px;
 }
-#area-cabecalho a:hover{
+
+#area-cabecalho a:hover {
     color: #12AF50;
     background-color: #f5f2f2;
     text-decoration: none;
-    
 }
 
 .botao-pesquisa {
     height: 30px;
     width: 30px;
+    background-color: #FFFFFF;
+    transition: none;
+    margin-top: -6px; /* Ajuste este valor conforme necessário */
 }
 
+/* Removi qualquer efeito hover que pudesse existir */
+.botao-pesquisa:hover {
+    background-color: #FFFFFF; /* Mantém a mesma cor */
+    opacity: 1; /* Remove qualquer alteração de opacidade */
+}
 
 /* Estilo do formulário de pesquisa */
 .barra-pesquisa {
-    display: flex; /* Alinha os elementos na horizontal */
-    justify-content: flex-end; /* Move os elementos para o canto direito */
-    width: 100%; /* O formulário ocupa toda a largura disponível */
-    position: relative; /* Permite posicionamento do botão relativo ao contêiner */
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    position: relative;
 }
 
 /* Estilo do campo de entrada */
 .barra-pesquisa input {
-    padding: 5px; /* Espaçamento interno do campo */
-    margin-right: 12px; /* Espaço entre o campo de entrada e o botão */
+    padding: 5px;
+    margin-right: 12px;
 }
-
-
-

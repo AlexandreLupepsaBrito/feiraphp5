@@ -87,8 +87,10 @@ if (isset($_GET['id'])) {
                 echo "<span>" . htmlspecialchars($row['nome']) . "</span>";
                 echo "<span>R$ <span class='price'>" . number_format($row['preco'], 2, ',', '.') . "</span><br>";
                 echo "<span class='unit'>" . htmlspecialchars($row['categoria']) . "</span>";
-                echo "<button type='button' onclick=\"location.href='editarproduto.php?id=" . $row['id'] . "'\">Editar</button>";
-                echo "<button type='button' onclick=\"location.href='excluirproduto.php?id=" . $row['id'] . "'\">Excluir</button>";
+                echo "<div class='button-group'>";
+                echo "<button type='button' class='edit-btn' onclick=\"location.href='editarproduto.php?id=" . $row['id'] . "'\">Editar</button>";
+                echo "<button type='button' class='delete-btn' onclick=\"location.href='excluirproduto.php?id=" . $row['id'] . "'\">Excluir</button>";
+                echo "</div>";
                 echo "</div></div>";
             }
         } else {
